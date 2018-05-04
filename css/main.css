@@ -1,0 +1,138 @@
+    /** {border:1px solid #ff0000;}*/
+
+.body{background-color: #444;}
+
+    .chart-container {
+        width: 100vw;
+        height: 400px;
+        padding: 3em;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+
+    .button-container {
+        background-color: #FF5500;
+
+        text-align: center;
+        height: 10em;
+    }
+
+    .button-inside {
+        background-color: #fff;
+
+        margin-top: 0em;
+        height: 10em;
+    }
+
+
+
+    .button-inside .sensorData {
+        padding: 2em;
+    }
+
+    .button-inside .sensorValue {
+        margin: 1em;
+        color: #808080;
+    }
+
+    .button-inside .sensorIcon {
+        color: #808080;
+    }
+
+    .button-inside .sensorValue1 {
+        padding-right: 0.55em;
+        font-size: 1em;
+        border-right: 1px solid #808080;
+        height: 1.25em;
+        display: inline-block;
+    }
+
+    .button-inside .sensorValue2 {
+        font-size: 1em;
+        display: inline-block;
+    }
+
+    .button-inside .sensorName {
+        font-size: 0.80em;
+        margin: 1em;
+
+        color: #808080;
+    }
+
+    .selected {
+        padding-top: 0.25em;
+    }
+
+    .selected .button-inside {
+        background-color: #F5F5F5;
+    }
+
+    .selected .sensorValue2 {
+        color: #FF5500;
+    }
+
+    .selected .sensorIcon {
+        color: #FF5500;
+    }
+
+    .selected .sensorValue1 {
+        color: #000;
+    }
+
+    .selected .sensorName {
+        color: #000;
+    }
+
+    .center {
+        display: flex;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .sensorPadding {
+        padding-right: 3em;
+    }
+
+    .sensorExtra-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    .sensorExtra-inside {
+        padding-left: 1em;
+        padding-right: 1em;
+        display: inline-block;
+    }
+
+    .sensorExtra-inside #minValue {
+        font-size: 1.5em;
+    }
+
+
+    .sensorExtra-inside #maxValue {
+        font-size: 1.5em;
+    }
+
+    .sensorExtra-inside #desc {
+        font-size: 0.85em;
+    }
+
+
+    #sensorMin {
+        border-right: 1px solid #808080;
+    }
+
+    .lastUpdated {
+        margin: 1em;
+    }
+
+    .lastUpdated h4 {
+        font-size: 0.85em;
+    }

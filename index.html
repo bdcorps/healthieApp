@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Healthie App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="center lastUpdated">
+                <h4>Last Updated</h4>&nbsp
+                <h4 id="timestamp"></h4></div>
+
+
+<div class="title"></div>
+
+
+   <div class="sensorExtra-container">
+
+            <div class="sensorExtra-inside">
+                <div id="sensorMin">
+                <div class="sensorPadding">
+                       <h2 id="minValue">0</h2>
+                       <div id="desc">MIN VALUE</div>
+                </div>
+             </div>
+    </div>
+
+   
+            <div class="sensorExtra-inside">
+              <div id="sensorMax">
+                       <h2 id="maxValue">0</h2>
+                       <div id="desc">MAX VALUE</div>
+                   
+                </div>
+             </div></div>
+
+        </div>
+        <div class="chart-container">
+            <canvas id="line-chart"></canvas>
+        </div>
+        <div class="row buttons">
+            <div class="col-md-2">
+                <div id="compass">
+                    <div class="button-container selected">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 34
+                                    </div>
+                                    <div class="sensorValue2">+10</div>
+                                    <div class="sensorName">
+                                        COMPASS
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="acc">
+                    <div class="button-container">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 12
+                                    </div>
+                                    <div class="sensorValue2">-10</div>
+                                    <div class="sensorName">
+                                        ACCELERATION
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="gyro">
+                    <div class="button-container">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 22
+                                    </div>
+                                    <div class="sensorValue2">+14</div>
+                                    <div class="sensorName">
+                                        GYROSCOPE
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="humidity">
+                    <div class="button-container">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 22
+                                    </div>
+                                    <div class="sensorValue2">+14</div>
+                                    <div class="sensorName">
+                                        HUMIDITY
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="object_temp">
+                    <div class="button-container">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 22
+                                    </div>
+                                    <div class="sensorValue2">+14</div>
+                                    <div class="sensorName">
+                                        TEMPERATURE
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="light">
+                    <div class="button-container">
+                        <div class="button-inside">
+                            <div class="sensorData">
+                                <i class="fa fa-compass fa-2x sensorIcon" aria-hidden="true"></i>
+                                <div class="sensorValue">
+                                    <div class="sensorValue1"> 22
+                                    </div>
+                                    <div class="sensorValue2">+14</div>
+                                    <div class="sensorName">
+                                        LIGHT
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <select name='sensorinput' id='sensorinput' required>
+                        <optgroup label='Sensor Data'>
+                            <option value='compass_x'>Compass X</option>
+                            <option value='compass_y'>Compass Y</option>
+                              <option value='compass_z'>Compass Z</option>
+
+                            <option value='acc_x'>Acc X</option>
+                             <option value='acc_y'>Acc Y</option>
+                            <option value='acc_z'>Acc Z</option>
+
+                            <option value='gyro_x'>Gyro X</option>
+                            <option value='gyro_y'>Gyro Y</option>
+                            <option value='gyro_z'>Gyro Z</option>
+
+                            <option value='humidity'>Humidity</option>
+                            <option value='object_temp'>Object Temp</option>
+
+                              <option value='light'>Light</option>
+
+                              <option value='ambient_temp'>Ambient Temperature</option>
+                        </optgroup>
+                    </select>
+ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
